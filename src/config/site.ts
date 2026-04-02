@@ -13,7 +13,7 @@ export const siteConfig = {
     { id: 6, title: "Sobrancelhas", description: "Limpeza e design de sobrancelhas para um acabamento perfeito.", price: "5,00 €" }
   ],
   aboutFull: {
-    story: "Com mais de 10 anos de experiência na arte da barbearia, Euclides Style consolidou-se como uma referência em Portugal. Começando pela paixão pelos detalhes, a nossa barbearia transformou-se num espaço onde a tradição se encontra com as tendências mais modernas do mundo masculino.",
+    story: "Com mais de 10 anos de experiência na arte da barbearia, a Euclides Style consolidou-se como uma referência em Portugal. Movida pela paixão pelos detalhes, a nossa barbearia transformou-se num espaço onde a tradição se encontra com as tendências mais modernas do mundo masculino.",
     mission: "A nossa missão é elevar o padrão de cada homem que entra na nossa barbearia, proporcionando não apenas um corte, mas uma experiência de renovação de imagem e confiança.",
     experience: "Especialista certificado em técnicas avançadas de fade, cortes clássicos europeus e barboterapia tradicional."
   },

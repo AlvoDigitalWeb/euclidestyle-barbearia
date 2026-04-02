@@ -64,7 +64,7 @@ export function LocationSection() {
       <Container>
         <div className="text-center mb-16 relative z-10">
           <Heading variant="h2" className="text-white mb-4">
-            Nossas Localizações
+            As Nossas Localizações
           </Heading>
           <Text className="text-gray-400 max-w-2xl mx-auto">
             Projetadas para lhe oferecer a melhor experiência, com fácil acesso e ambientes premium.

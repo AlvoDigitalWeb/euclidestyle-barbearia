@@ -7,7 +7,7 @@ import { Text, Card } from "../components/ui/DataDisplay";
 
 const About = () => {
   return (
-    <div className="py-20 min-h-screen">
+    <div className="pt-20 min-h-screen">
       {/* Story Section */}
       <Section className="bg-bg overflow-hidden">
         <Container>
@@ -57,7 +57,7 @@ const About = () => {
       </Section>
 
       {/* Core Values / Stats */}
-      <Section className="bg-secondary">
+      <Section className="bg-bg pb-20">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[

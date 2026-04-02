@@ -58,7 +58,7 @@ export const Footer = () => {
                 { label: 'Início', path: '/' },
                 { label: 'Serviços', path: '/servicos' },
                 { label: 'Sobre Nós', path: '/sobre' },
-                { label: 'Contato', path: '/contato' }
+                { label: 'Contacto', path: '/contato' }
               ].map((link) => (
                 <li key={link.label}>
                   <Link
