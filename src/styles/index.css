@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  /* CORES */
+  --color-primary: #d4af37;
+  --color-secondary: #0a0a0a;
+  --color-accent: #ffffff;
+
+  /* BACKGROUND */
+  --color-bg: #141414;
+  --color-surface: #1e1e1e;
+  --color-surface-hover: #252525;
+
+  /* TIPOGRAFIA */
+  --font-base: 16px;
+  --font-lg: 18px;
+  --font-xl: 24px;
+  --font-heading: "Playfair Display", serif;
+  /* RADIUS */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* ESPAÇAMENTO */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+
+  /* SHADOW */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.15);
+}
+
+/* CUSTOM UTILITIES OR BASE STYLES */
+@layer base {
+  body {
+    @apply bg-bg text-white font-[family-name:--font-body] font-light antialiased;
+    letter-spacing: 0.05em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-[family-name:--font-heading] font-black uppercase tracking-tight m-0;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    @apply bg-gradient-to-r from-primary via-[#e5c158] to-primar
