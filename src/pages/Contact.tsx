@@ -20,7 +20,7 @@ const Contact = () => {
           <div className="text-center mb-16 sm:mb-24 max-w-4xl mx-auto px-4">
             <div className="inline-flex items-center gap-4 text-[10px] font-black tracking-[0.4em] text-primary uppercase mb-6">
               <div className="w-10 h-[1px] bg-primary" />
-              <span>Get in Touch</span>
+              <span>ENTRE EM CONTACTO</span>
               <div className="w-10 h-[1px] bg-primary" />
             </div>
             <Heading variant="h1" className="text-4xl sm:text-7xl lg:text-8xl font-black italic uppercase leading-none">
@@ -89,7 +89,7 @@ const Contact = () => {
               <div className="space-y-8">
                 <div className="flex items-center gap-5 justify-center lg:justify-start">
                   <MapPin className="text-primary w-6 h-6" />
-                  <Heading variant="h3" className="text-2xl sm:text-3xl font-black uppercase italic italic">Nossas Unidades</Heading>
+                  <Heading variant="h3" className="text-2xl sm:text-3xl font-black uppercase italic">AS NOSSAS UNIDADES</Heading>
                 </div>
                 <div className="grid gap-6">
                   {Object.entries(siteConfig.address).map(([key, addr]) => (
@@ -112,7 +112,7 @@ const Contact = () => {
               <div className="space-y-8">
                 <div className="flex items-center gap-5 justify-center lg:justify-start">
                   <Clock className="text-primary w-6 h-6" />
-                  <Heading variant="h3" className="text-2xl sm:text-3xl font-black uppercase italic italic">Horário</Heading>
+                  <Heading variant="h3" className="text-2xl sm:text-3xl font-black uppercase italic">HORÁRIO</Heading>
                 </div>
                 <Card className="p-8 sm:p-12 border border-white/5 bg-surface/40 backdrop-blur-sm rounded-sm">
                   <div className="space-y-5">

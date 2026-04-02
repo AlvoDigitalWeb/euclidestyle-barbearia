@@ -36,7 +36,7 @@ export const ServicesSection = () => {
         >
           <div className="inline-flex items-center gap-4 text-[10px] font-black tracking-[0.4em] text-primary uppercase mb-6">
             <div className="w-10 h-[1px] bg-primary" />
-            <span>Nossos Serviços</span>
+            <span>OS NOSSOS SERVIÇOS</span>
             <div className="w-10 h-[1px] bg-primary" />
           </div>
           <Heading variant="h2" className="text-4xl sm:text-7xl font-black italic uppercase leading-tight">
@@ -87,7 +87,7 @@ export const ServicesSection = () => {
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block">
             <Button size="lg" className="w-full sm:w-auto items-center gap-4 px-12 py-8 text-[10px] font-black tracking-[0.3em] uppercase bg-primary text-black shadow-2xl shadow-primary/20 hover:scale-105 transition-all duration-500">
               <Calendar className="w-4 h-4" />
-              GARANTIR SEU HORÁRIO
+              GARANTIR O MEU HORÁRIO
             </Button>
           </a>
         </motion.div>

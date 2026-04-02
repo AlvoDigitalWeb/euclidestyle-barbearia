@@ -31,8 +31,8 @@ const Services = () => {
           >
             <Text className="text-primary font-black tracking-[0.4em] uppercase text-[10px] mb-6">EXPERIÊNCIA EURO-CHIC</Text>
             <Heading variant="h1" className="text-4xl sm:text-7xl lg:text-8xl font-black mb-8 tracking-tight leading-[1.1] italic">
-              A ARTE DO <br />
-              <span className="text-gold-gradient">ALTA PERFORMANCE.</span>
+              A ARTE <br />
+              <span className="text-gold-gradient">DA ALTA PERFORMANCE.</span>
             </Heading>
             <div className="max-w-xl mx-auto sm:mx-0">
               <Text variant="lead" className="text-white/40 text-sm sm:text-lg leading-relaxed uppercase tracking-widest">

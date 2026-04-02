@@ -30,7 +30,7 @@ const About = () => {
                   {siteConfig.aboutFull.mission}
                 </Text>
                 <div className="bg-surface/50 p-6 border-l-4 border-primary rounded-r-lg">
-                  <Text variant="lead" className="italic font-normal italic">
+                  <Text variant="lead" className="italic font-normal">
                     "{siteConfig.aboutFull.experience}"
                   </Text>
                 </div>
@@ -47,7 +47,7 @@ const About = () => {
               <Card className="aspect-[4/5] relative overflow-hidden shadow-2xl border border-white/10">
                 <img
                   src={siteConfig.images.hero}
-                  alt="Euclides "
+                  alt="Euclides"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
               </Card>
