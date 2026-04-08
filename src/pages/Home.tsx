@@ -14,7 +14,7 @@ const Home = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen"
     >
-      {/* <TemplateWarning /> */}
+      <TemplateWarning />
       <HeroSection />
       <ResultsSection />
       <AboutSection />
