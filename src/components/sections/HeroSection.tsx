@@ -86,7 +86,7 @@ export const HeroSection = () => {
             <img
               src={siteConfig.images.hero}
               alt="Euclides - Mestre Barbeiro"
-              className="w-full h-full object-cover object-[50%_20%] brightness-100 contrast-110"
+              className="w-full h-full object-cover object-[50%_10%] brightness-100 contrast-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-40" />
             <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-bg to-transparent" />

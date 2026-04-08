@@ -44,7 +44,7 @@ export const siteConfig = {
   },
   images: {
     background: "/images/background.png",
-    hero: "/images/barber-hero.png",
+    hero: "/images/hero.png",
     aboutBefore: "/images/euclides/euclides-working.png",
     aboutAfter: "/images/euclides/euclides-client.png",
     gallery: [
