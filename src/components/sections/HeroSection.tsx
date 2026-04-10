@@ -6,7 +6,6 @@ import { Heading } from "../ui/Heading";
 import { Text } from "../ui/DataDisplay";
 
 export const HeroSection = () => {
-  const whatsappLink = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`;
 
   return (
     <Section className="relative min-h-[100dvh] lg:h-[100dvh] lg:max-h-[1080px] w-full flex flex-col justify-center overflow-hidden bg-bg">
@@ -50,8 +49,8 @@ export const HeroSection = () => {
               </div>
 
               <Heading variant="h1" className="font-serif leading-[0.95] tracking-tighter text-3xl sm:text-4xl lg:text-7xl xl:text-[5rem] drop-shadow-2xl italic font-normal">
-                Cortes que <br />
-                <span className="text-primary not-italic">elevam o seu padrão.</span>
+                O Melhor <br />
+                <span className="text-primary not-italic">Corte do Mundo.</span>
               </Heading>
 
               <div className="max-w-md mx-auto lg:mx-0">
@@ -62,7 +61,7 @@ export const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 lg:gap-6 pt-4">
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-block">
+              <a href={siteConfig.agendaLink} target="_blank" rel="noopener noreferrer" className="inline-block">
                 <Button size="lg" className="h-14 lg:h-16 px-8 lg:px-16 text-xs lg:text-sm tracking-[0.25em] font-black group relative overflow-hidden shadow-2xl bg-primary text-black border-none hover:bg-primary/90 transition-all hover:scale-105 pointer-events-auto">
                   AGENDAR AGORA
                   <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />

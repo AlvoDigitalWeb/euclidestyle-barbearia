@@ -112,11 +112,11 @@ export const Footer = () => {
 
               {/* Phone */}
               <a
-                href={`tel:${siteConfig.socials.phone}`}
+                href={`tel:${siteConfig.whatsapp}`}
                 className="flex items-center gap-4 group pt-2 border-t border-white/5 hover:text-primary transition-colors duration-300"
               >
                 <Phone className="w-5 h-5 text-primary opacity-80" />
-                <Text variant="p" className="text-gray-300 font-bold !text-[15px] group-hover:text-primary transition-colors">{siteConfig.socials.phone}</Text>
+                <Text variant="p" className="text-gray-300 font-bold !text-[15px] group-hover:text-primary transition-colors">{siteConfig.whatsapp}</Text>
               </a>
             </div>
           </div>

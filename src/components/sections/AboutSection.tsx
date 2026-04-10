@@ -82,7 +82,7 @@ export const AboutSection = () => {
               </Heading>
 
               <div className="flex items-center justify-center lg:justify-start gap-4">
-                <span className="text-4xl font-serif text-primary italic">10+</span>
+                <span className="text-4xl font-serif text-primary italic">26+</span>
                 <span className="text-[10px] text-white/40 uppercase tracking-[0.3em] font-black text-left leading-tight">
                   Anos de <br />Experiência
                 </span>

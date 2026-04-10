@@ -12,10 +12,12 @@ const iconsMap: Record<string, any> = {
   "Combo": Sparkles,
   "Platinado": Sparkles,
   "Sobrancelhas": Scissors,
+  "Gel": Palette,
+  "Polygel": Palette,
+  "Softgel": Palette,
 };
 
 const Services = () => {
-  const whatsappLink = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`;
 
   return (
     <div className="bg-bg min-h-screen pt-32 pb-20 overflow-hidden relative">
@@ -41,75 +43,90 @@ const Services = () => {
             </div>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-            {/* Services List - Left Column */}
-            <div className="space-y-12">
-              <div className="flex flex-col items-center sm:items-start space-y-2">
-                <Text className="text-primary font-black uppercase tracking-[0.3em] text-[10px]">MENU DE EXCELÊNCIA</Text>
-                <div className="w-16 h-[1px] bg-primary/50" />
-              </div>
+          <div className="space-y-24 lg:space-y-40">
+            {Object.entries(
+              siteConfig.services.reduce((acc, service) => {
+                const cat = service.category || "Menu de Excelência";
+                if (!acc[cat]) acc[cat] = [];
+                acc[cat].push(service);
+                return acc;
+              }, {} as Record<string, typeof siteConfig.services>)
+            ).map(([category, services], catIndex) => (
+              <div key={category} className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+                {/* Services List - Left Column */}
+                <div className="space-y-12">
+                  <div className="flex flex-col items-center sm:items-start space-y-2 mb-10 sm:mb-12">
+                    <Text className="text-primary font-black uppercase tracking-[0.3em] text-[10px]">{category.toUpperCase()}</Text>
+                    <div className="w-16 h-[1px] bg-primary/50" />
+                  </div>
 
-              <div className="space-y-10 sm:space-y-12">
-                {siteConfig.services.map((service, index) => {
-                  const iconKey = Object.keys(iconsMap).find(key => service.title.includes(key)) || "Normal";
-                  const Icon = iconsMap[iconKey];
+                  <div className="space-y-10 sm:space-y-12">
+                    {services.map((service, index) => {
+                      const iconKey = Object.keys(iconsMap).find(key => service.title.includes(key)) || "Normal";
+                      const Icon = iconsMap[iconKey];
 
-                  return (
-                    <motion.div
-                      key={service.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="group relative"
-                    >
-                      <div className="flex flex-row items-end gap-3 sm:gap-4 mb-2 sm:mb-3">
-                        <div className="flex items-center gap-3 sm:gap-5 shrink-0">
-                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/5 flex items-center justify-center shrink-0 group-hover:border-primary/50 group-hover:bg-primary/10 transition-all duration-700 shadow-xl bg-surface">
-                            <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white/30 group-hover:text-primary transition-colors duration-500" />
+                      return (
+                        <motion.div
+                          key={service.id}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.1 }}
+                          className="group relative"
+                        >
+                          <div className="flex flex-row items-end gap-3 sm:gap-4 mb-2 sm:mb-3">
+                            <div className="flex items-center gap-3 sm:gap-5 shrink-0">
+                              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/5 flex items-center justify-center shrink-0 group-hover:border-primary/50 group-hover:bg-primary/10 transition-all duration-700 shadow-xl bg-surface">
+                                <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white/30 group-hover:text-primary transition-colors duration-500" />
+                              </div>
+                              <Heading variant="h4" className="text-[15px] sm:text-2xl font-black text-white group-hover:text-primary transition-colors duration-500 uppercase tracking-tight italic">
+                                {service.title}
+                              </Heading>
+                            </div>
+                            <div className="flex-1 border-b border-white/10 border-dashed mb-1.5 sm:mb-2 group-hover:border-primary/30 transition-colors duration-700 opacity-50 sm:opacity-100 min-w-[20px]" />
+                            <div className="shrink-0 mb-[-2px] sm:mb-0">
+                              <span className="text-[15px] sm:text-2xl font-black text-primary sm:text-white italic group-hover:text-primary transition-colors duration-500">
+                                {service.price}
+                              </span>
+                            </div>
                           </div>
-                          <Heading variant="h4" className="text-[15px] sm:text-2xl font-black text-white group-hover:text-primary transition-colors duration-500 uppercase tracking-tight italic">
-                            {service.title}
-                          </Heading>
-                        </div>
-                        <div className="flex-1 border-b border-white/10 border-dashed mb-1.5 sm:mb-2 group-hover:border-primary/30 transition-colors duration-700 opacity-50 sm:opacity-100 min-w-[20px]" />
-                        <div className="shrink-0 mb-[-2px] sm:mb-0">
-                          <span className="text-[15px] sm:text-2xl font-black text-primary sm:text-white italic group-hover:text-primary transition-colors duration-500">
-                            {service.price}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="pl-[52px] sm:pl-[68px]">
-                        <Text className="text-[11px] sm:text-sm text-white/30 max-w-lg leading-relaxed group-hover:text-white/60 transition-colors duration-500 tracking-wide uppercase sm:normal-case">
-                          {service.description}
-                        </Text>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Visual Highlight - Right Column */}
-            <div className="hidden lg:block sticky top-40">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.2 }}
-                className="relative aspect-[4/5] rounded-sm overflow-hidden border border-white/5 shadow-2xl group"
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/20 to-transparent z-10 opacity-60" />
-                <img
-                  src={siteConfig.images.aboutBefore}
-                  alt="Euclides Style Experience"
-                  className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 grayscale group-hover:grayscale-0"
-                />
-                <div className="absolute bottom-12 left-12 right-12 z-20 space-y-6">
-                  <div className="w-12 h-1 bg-primary" />
-                  <Heading variant="h3" className="text-white font-black text-4xl italic leading-tight uppercase">O SEU MOMENTO DE RENOVAÇÃO.</Heading>
-                  <Text className="text-[10px] text-white/40 font-black uppercase tracking-[0.5em]">QUALIDADE PREMIUM CERTIFICADA</Text>
+                          <div className="pl-[52px] sm:pl-[68px]">
+                            <Text className="text-[11px] sm:text-sm text-white/30 max-w-lg leading-relaxed group-hover:text-white/60 transition-colors duration-500 tracking-wide uppercase sm:normal-case">
+                              {service.description}
+                            </Text>
+                          </div>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
                 </div>
-              </motion.div>
-            </div>
+
+                {/* Visual Highlight - Right Column */}
+                <div className="hidden lg:block sticky top-40">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2 }}
+                    className="relative aspect-[4/5] rounded-sm overflow-hidden border border-white/5 shadow-2xl group"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-b from-bg/90 via-bg/40 to-transparent z-10 opacity-80" />
+                    <img
+                      src={catIndex === 0 ? siteConfig.images.aboutBefore : siteConfig.images.servicesNails}
+                      alt={`${category} Experience`}
+                      className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 grayscale group-hover:grayscale-0"
+                    />
+                    <div className="absolute top-12 sm:top-16 left-12 right-12 z-20 space-y-6">
+                      <div className="w-12 h-1 bg-primary" />
+                      <Heading variant="h3" className="text-white font-black text-4xl italic leading-tight uppercase drop-shadow-lg">
+                        {catIndex === 0 ? "O SEU MOMENTO DE RENOVAÇÃO." : "A ARTE DO DETALHE."}
+                      </Heading>
+                      <Text className="text-[10px] text-white/60 font-black uppercase tracking-[0.5em] drop-shadow-md">QUALIDADE PREMIUM ELEGANCE</Text>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* CTA Banner */}
@@ -140,7 +157,7 @@ const Services = () => {
             </div>
 
             <div className="flex justify-center relative z-10 pt-4 pb-2 sm:py-8 transition-transform duration-500 group-hover:scale-105">
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full md:w-auto">
+              <a href={siteConfig.agendaLink} target="_blank" rel="noopener noreferrer" className="w-full md:w-auto">
                 <Button size="lg" className="w-full md:w-auto flex items-center justify-center gap-4 px-20 py-8 text-sm shadow-[0_30px_70px_rgba(212,175,55,0.15)] bg-primary text-black font-black uppercase tracking-[0.3em]">
                   <Calendar className="w-5 h-5 flex-shrink-0" />
                   AGENDAR HORÁRIO

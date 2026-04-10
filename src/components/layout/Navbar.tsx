@@ -10,6 +10,7 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
   const whatsappLink = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`;
 
   const navLinks = [
@@ -42,12 +43,11 @@ export const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
-        isScrolled || isMenuOpen
-          ? "bg-bg shadow-lg border-b border-white/5 py-3" 
-          : "bg-transparent py-5 border-b border-transparent"
-      }`}
+    <nav
+      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${isScrolled || isMenuOpen
+        ? "bg-bg shadow-lg border-b border-white/5 py-3"
+        : "bg-transparent py-5 border-b border-transparent"
+        }`}
     >
       <Container>
         <div className="flex items-center justify-between">
@@ -67,9 +67,8 @@ export const Navbar = () => {
                 <Link
                   key={item.label}
                   to={item.path}
-                  className={`text-[10px] font-semibold transition-all tracking-[0.25em] uppercase whitespace-nowrap ${
-                    location.pathname === item.path ? "text-primary" : "text-white/60 hover:text-white"
-                  }`}
+                  className={`text-[10px] font-semibold transition-all tracking-[0.25em] uppercase whitespace-nowrap ${location.pathname === item.path ? "text-primary" : "text-white/60 hover:text-white"
+                    }`}
                 >
                   {item.label}
                 </Link>
@@ -81,8 +80,8 @@ export const Navbar = () => {
               animate={{ opacity: 1, scale: 1 }}
               className="flex items-center"
             >
-              <a 
-                href={whatsappLink}
+              <a
+                href={siteConfig.agendaLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary hover:bg-[#bfa032] text-black px-8 py-3 rounded-sm text-[10px] font-black tracking-[0.2em] uppercase transition-all shadow-lg hover:shadow-primary/20 whitespace-nowrap"
@@ -93,7 +92,7 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="lg:hidden text-white p-2 z-[110]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
@@ -124,9 +123,8 @@ export const Navbar = () => {
                 >
                   <Link
                     to={item.path}
-                    className={`block py-3 transition-colors ${
-                      location.pathname === item.path ? "text-primary" : "text-white/70 hover:text-white"
-                    }`}
+                    className={`block py-3 transition-colors ${location.pathname === item.path ? "text-primary" : "text-white/70 hover:text-white"
+                      }`}
                   >
                     <span className="text-lg sm:text-xl font-bold tracking-[0.25em] uppercase">
                       {item.label}
@@ -143,12 +141,19 @@ export const Navbar = () => {
               className="w-full max-w-xs flex flex-col items-center space-y-8 pt-8 border-t border-white/10"
             >
               <div className="w-full space-y-4 text-center">
-                <p className="text-[9px] uppercase tracking-[0.3em] text-white/30 font-black">Reserve seu horário</p>
-                <a 
+                <a
+                  href={siteConfig.agendaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-transparent border border-white/30 text-white/50 w-full py-4 rounded-sm text-[10px] tracking-[0.2em] uppercase transition-all shadow-lg text-center block"
+                >
+                  Reserve seu horário
+                </a>
+                <a
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-primary hover:bg-[#bfa032] text-black w-full py-4 rounded-sm text-[10px] font-black tracking-[0.2em] uppercase transition-all shadow-lg text-center block"
+                  className="bg-primary hover:bg-[#bfa032] text-black w-full py-4 rounded-sm text-[10px] tracking-[0.2em] uppercase transition-all shadow-lg text-center block"
                 >
                   Falar no WhatsApp
                 </a>

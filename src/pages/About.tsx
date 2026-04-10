@@ -62,7 +62,7 @@ const About = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { icon: User, value: "10k+", label: "Avaliações" },
-              { icon: Award, value: "10+", label: "Anos de Experiência" },
+              { icon: Award, value: "26+", label: "Anos de Experiência" },
               { icon: Scissors, value: "50k+", label: "Cortes Realizados" },
               { icon: CheckCircle, value: "99%", label: "Satisfação" }
             ].map((stat, i) => (

@@ -119,7 +119,7 @@ const Contact = () => {
                     {siteConfig.hours.map((h, i) => (
                       <div key={i} className="flex justify-between items-center border-b border-white/5 pb-4 last:border-0 last:pb-0 group">
                         <p className="text-xs sm:text-sm font-black text-white uppercase tracking-widest group-hover:text-primary transition-colors duration-500">{h.day}</p>
-                        <p className={`text-xs sm:text-sm font-black uppercase tracking-widest ${h.time === "Fechado" ? "text-red-500/60" : "text-white/40 group-hover:text-white transition-colors duration-500"}`}>{h.time}</p>
+                        <p className={`text-xs sm:text-sm font-black tracking-widest ${h.time === "Encerrado" ? "text-red-500/60 group-hover:text-red-500" : "text-white/40 group-hover:text-white transition-colors duration-500"}`}>{h.time}</p>
                       </div>
                     ))}
                   </div>
