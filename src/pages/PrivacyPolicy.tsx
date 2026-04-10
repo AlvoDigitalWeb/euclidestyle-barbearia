@@ -61,7 +61,7 @@ export const PrivacyPolicy = () => {
                     </div>
                     <div className="space-y-1">
                       <Text className="text-[10px] text-gray-500 uppercase font-black tracking-widest">Telefone</Text>
-                      <Text className="text-white font-bold">{siteConfig.socials.phone}</Text>
+                      <Text className="text-white font-bold">{siteConfig.whatsapp}</Text>
                     </div>
                   </div>
                 </Card>
@@ -85,27 +85,27 @@ export const PrivacyPolicy = () => {
                   <Heading variant="h3" className="text-xl uppercase tracking-wider font-bold">3. DADOS RECOLHIDOS</Heading>
                 </div>
                 <div className="space-y-4">
-                   <Text variant="p" className="text-gray-400">Recolhemos dados adaptados à realidade do setor de barbearia:</Text>
-                   <ul className="space-y-4 ml-2">
-                     <li className="flex gap-3">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
-                        <Text variant="p" className="text-gray-400 text-sm">
-                          <span className="text-white font-bold">Dados de Contacto:</span> Nome, telefone e e-mail — utilizados principalmente para gestão de marcações e comunicações diretas.
-                        </Text>
-                     </li>
-                     <li className="flex gap-3">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
-                        <Text variant="p" className="text-gray-400 text-sm">
-                          <span className="text-white font-bold">Dados de Agendamento:</span> Serviço escolhido, data, hora e preferências de atendimento.
-                        </Text>
-                     </li>
-                     <li className="flex gap-3">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
-                        <Text variant="p" className="text-gray-400 text-sm">
-                          <span className="text-white font-bold">Dados de Navegação:</span> Informações recolhidas via cookies (se aplicável), como endereço IP e comportamento no site.
-                        </Text>
-                     </li>
-                   </ul>
+                  <Text variant="p" className="text-gray-400">Recolhemos dados adaptados à realidade do setor de barbearia:</Text>
+                  <ul className="space-y-4 ml-2">
+                    <li className="flex gap-3">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                      <Text variant="p" className="text-gray-400 text-sm">
+                        <span className="text-white font-bold">Dados de Contacto:</span> Nome, telefone e e-mail — utilizados principalmente para gestão de marcações e comunicações diretas.
+                      </Text>
+                    </li>
+                    <li className="flex gap-3">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                      <Text variant="p" className="text-gray-400 text-sm">
+                        <span className="text-white font-bold">Dados de Agendamento:</span> Serviço escolhido, data, hora e preferências de atendimento.
+                      </Text>
+                    </li>
+                    <li className="flex gap-3">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                      <Text variant="p" className="text-gray-400 text-sm">
+                        <span className="text-white font-bold">Dados de Navegação:</span> Informações recolhidas via cookies (se aplicável), como endereço IP e comportamento no site.
+                      </Text>
+                    </li>
+                  </ul>
                 </div>
               </div>
 

@@ -74,11 +74,11 @@ const Contact = () => {
                   </Card>
                 </a>
 
-                <a href={`tel:${siteConfig.socials.phone}`} className="block group">
+                <a href={`tel:${siteConfig.whatsapp}`} className="block group">
                   <Card className="p-8 sm:p-10 bg-surface border border-white/5 rounded-sm hover:border-primary/30 transition-all duration-500 text-center sm:text-left h-full">
                     <Phone className="w-6 h-6 text-primary mb-6 mx-auto sm:mx-0 group-hover:scale-110 transition-transform duration-500" />
                     <p className="text-[10px] text-white/30 uppercase tracking-[0.3em] font-black mb-2">Telemóvel</p>
-                    <p className="text-sm font-black text-white uppercase tracking-widest group-hover:text-primary transition-colors duration-500">{siteConfig.socials.phone}</p>
+                    <p className="text-sm font-black text-white uppercase tracking-widest group-hover:text-primary transition-colors duration-500">{siteConfig.whatsapp}</p>
                   </Card>
                 </a>
               </div>
