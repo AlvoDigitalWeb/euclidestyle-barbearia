@@ -12,12 +12,12 @@ export const siteConfig = {
     { id: 4, category: "Cabelo & Barba", title: "Combo Premium", description: "Corte, barba e design de sobrancelha para uma transformação total.", price: "24,00 €" },
     { id: 5, category: "Cabelo & Barba", title: "Platinado", description: "Transformação radical com descoloração e matização de alta performance.", price: "35,00 €" },
     { id: 6, category: "Cabelo & Barba", title: "Sobrancelhas", description: "Limpeza e design de sobrancelhas para um acabamento perfeito.", price: "5,00 €" },
-    { id: "unhas-gel", category: "Unhas", title: "Gel 1ª Aplicação", price: "28,00 €", description: "Dependendo do tamanho da extensão · 1h 30 min" },
-    { id: "unhas-gelinho-maos", category: "Unhas", title: "Gelinho Mãos", price: "17,00 €", description: "2h" },
-    { id: "unhas-gelinho-pes", category: "Unhas", title: "Gelinho Pés", price: "17,50 €", description: "2h" },
-    { id: "unhas-manutencao", category: "Unhas", title: "Manutenção Gel", price: "22,00 €", description: "2h 35 min" },
-    { id: "unhas-polygel", category: "Unhas", title: "Polygel", price: "23,00 €", description: "2h" },
-    { id: "unhas-softgel", category: "Unhas", title: "Softgel", price: "23,00 €", description: "2h" }
+    { id: "unhas-gel", category: "Unhas", title: "Gel 1ª Aplicação", price: "28,00 €", description: "Aplicação inicial de unhas de gel com extensão personalizada." },
+    { id: "unhas-gelinho-maos", category: "Unhas", title: "Gelinho Mãos", price: "17,00 €", description: "Aplicação de verniz de gel nas mãos para maior durabilidade." },
+    { id: "unhas-gelinho-pes", category: "Unhas", title: "Gelinho Pés", price: "17,50 €", description: "Aplicação de verniz de gel nos pés, perfeita para maior resistência." },
+    { id: "unhas-manutencao", category: "Unhas", title: "Manutenção Gel", price: "22,00 €", description: "Manutenção para preservar o formato, resistência e beleza da aplicação." },
+    { id: "unhas-polygel", category: "Unhas", title: "Polygel", price: "23,00 €", description: "Construção de unhas conjugando durabilidade do acrílico com a flexibilidade do gel." },
+    { id: "unhas-softgel", category: "Unhas", title: "Softgel", price: "23,00 €", description: "Alongamento prático, leve e natural de alta fixação com cápsulas em gel." }
   ],
   aboutFull: {
     story: "Com mais de 10 anos de experiência na arte da barbearia, a Euclides Style consolidou-se como uma referência em Portugal. Movida pela paixão pelos detalhes, a nossa barbearia transformou-se num espaço onde a tradição se encontra com as tendências mais modernas do mundo masculino.",

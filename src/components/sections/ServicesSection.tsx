@@ -73,7 +73,7 @@ export const ServicesSection = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.8, delay: index * 0.1 }}
-                      className="h-full"
+                      className={`h-full ${index >= 3 ? 'hidden sm:block' : ''}`}
                     >
                       <Card hover className="bg-surface p-8 sm:p-12 flex flex-col items-center text-center space-y-8 group border border-white/5 h-full transition-all duration-700 hover:border-primary/20 rounded-sm shadow-2xl">
                         <div className="w-20 h-20 rounded-full bg-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(212,175,55,0.2)] transition-all duration-700 shadow-xl shrink-0 border border-white/5 group-hover:border-primary/30 relative overflow-hidden">
